@@ -37,6 +37,21 @@ fn main() {
         });
 
         assert_eq!(subscriber.read(cx).count, 4);
+
+        let bounds = Bounds::centered(None, size(px(300.0), px(300.0)), cx);
+        cx.open_window(
+            WindowOptions {
+                window_bounds: Some(WindowBounds::Windowed(bounds)),
+                ..Default::default()
+            },
+            |cx| {
+                cx.new_view(|_cx| Counter {
+                    count: 0,
+                    text: "World".into(),
+                })
+            },
+        )
+        .unwrap();
     });
 }
 
