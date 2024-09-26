@@ -64,14 +64,6 @@ fn main() {
     });
 }
 
-/*
-impl Render for Counter {
-    fn render(&mut self, _cx: &mut ViewContext<Self>) -> impl IntoElement {
-        std::dbg!("Rendering counter view");
-    }
-}
-*/
-
 impl Render for Counter {
     fn render(&mut self, _cx: &mut ViewContext<Self>) -> impl IntoElement {
         std::dbg!("Rendering counter view");
@@ -87,5 +79,15 @@ impl Render for Counter {
             .text_xl()
             .text_color(rgb(0xffffff))
             .child(format!("Hello, {}!", &self.text))
+            .child(div().flex().flex_col().children(vec![
+                            //increment_button,
+                            //decrement_button,
+                            div()
+                                .bg(rgb(0x4caf50))
+                                .text_color(rgb(0xffffff))
+                                .child(
+                                    format!("The number is: {}!", &self.count.to_string())
+                                ),
+                        ]))
     }
 }
