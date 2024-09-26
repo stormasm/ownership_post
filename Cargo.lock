@@ -817,7 +817,7 @@ dependencies = [
 [[package]]
 name = "collections"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed#9a8601227d99ad7a8b123a1470a89615919ca43e"
+source = "git+https://github.com/zed-industries/zed#11058765bec3bb1e0510254904276d29d4fc31f1"
 dependencies = [
  "rustc-hash",
 ]
@@ -1072,7 +1072,7 @@ dependencies = [
 [[package]]
 name = "derive_refineable"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed#9a8601227d99ad7a8b123a1470a89615919ca43e"
+source = "git+https://github.com/zed-industries/zed#11058765bec3bb1e0510254904276d29d4fc31f1"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1336,9 +1336,9 @@ checksum = "e8c02a5121d4ea3eb16a80748c74f5549a5665e4c21333c6098f283870fbdea6"
 
 [[package]]
 name = "fdeflate"
-version = "0.3.4"
+version = "0.3.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4f9bfee30e4dedf0ab8b422f03af778d9612b63f502710fc500a334ebe2de645"
+checksum = "d8090f921a24b04994d9929e204f50b498a33ea6ba559ffaa05e04f7ee7fb5ab"
 dependencies = [
  "simd-adler32",
 ]
@@ -1731,7 +1731,7 @@ dependencies = [
 [[package]]
 name = "gpui"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed#9a8601227d99ad7a8b123a1470a89615919ca43e"
+source = "git+https://github.com/zed-industries/zed#11058765bec3bb1e0510254904276d29d4fc31f1"
 dependencies = [
  "anyhow",
  "as-raw-xcb-connection",
@@ -1816,7 +1816,7 @@ dependencies = [
 [[package]]
 name = "gpui_macros"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed#9a8601227d99ad7a8b123a1470a89615919ca43e"
+source = "git+https://github.com/zed-industries/zed#11058765bec3bb1e0510254904276d29d4fc31f1"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1924,7 +1924,7 @@ dependencies = [
 [[package]]
 name = "http_client"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed#9a8601227d99ad7a8b123a1470a89615919ca43e"
+source = "git+https://github.com/zed-industries/zed#11058765bec3bb1e0510254904276d29d4fc31f1"
 dependencies = [
  "anyhow",
  "derive_more",
@@ -2286,7 +2286,7 @@ dependencies = [
 [[package]]
 name = "media"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed#9a8601227d99ad7a8b123a1470a89615919ca43e"
+source = "git+https://github.com/zed-industries/zed#11058765bec3bb1e0510254904276d29d4fc31f1"
 dependencies = [
  "anyhow",
  "bindgen",
@@ -3047,9 +3047,9 @@ dependencies = [
 
 [[package]]
 name = "redox_syscall"
-version = "0.5.5"
+version = "0.5.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "62871f2d65009c0256aed1b9cfeeb8ac272833c404e13d53d400cd0dad7a2ac0"
+checksum = "355ae415ccd3a04315d3f8246e86d67689ea74d88d915576e1589a351062a13b"
 dependencies = [
  "bitflags 2.6.0",
 ]
@@ -3068,7 +3068,7 @@ dependencies = [
 [[package]]
 name = "refineable"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed#9a8601227d99ad7a8b123a1470a89615919ca43e"
+source = "git+https://github.com/zed-industries/zed#11058765bec3bb1e0510254904276d29d4fc31f1"
 dependencies = [
  "derive_refineable",
 ]
@@ -3303,7 +3303,7 @@ checksum = "d369a96f978623eb3dc28807c4852d6cc617fed53da5d3c400feff1ef34a714a"
 [[package]]
 name = "semantic_version"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed#9a8601227d99ad7a8b123a1470a89615919ca43e"
+source = "git+https://github.com/zed-industries/zed#11058765bec3bb1e0510254904276d29d4fc31f1"
 dependencies = [
  "anyhow",
  "serde",
@@ -3381,9 +3381,9 @@ dependencies = [
 
 [[package]]
 name = "serde_spanned"
-version = "0.6.7"
+version = "0.6.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "eb5b1b31579f3811bf615c144393417496f152e12ac8b7663bf664f4a815306d"
+checksum = "87607cb1398ed59d48732e575a4c28a7a8ebf2454b964fe3f224f2afc07909e1"
 dependencies = [
  "serde",
 ]
@@ -3586,7 +3586,7 @@ checksum = "13c2bddecc57b384dee18652358fb23172facb8a2c51ccc10d74c157bdea3292"
 [[package]]
 name = "sum_tree"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed#9a8601227d99ad7a8b123a1470a89615919ca43e"
+source = "git+https://github.com/zed-industries/zed#11058765bec3bb1e0510254904276d29d4fc31f1"
 dependencies = [
  "arrayvec",
  "log",
@@ -4096,7 +4096,7 @@ checksum = "09cc8ee72d2a9becf2f2febe0205bbed8fc6615b7cb429ad062dc7b7ddd036a9"
 [[package]]
 name = "util"
 version = "0.1.0"
-source = "git+https://github.com/zed-industries/zed#9a8601227d99ad7a8b123a1470a89615919ca43e"
+source = "git+https://github.com/zed-industries/zed#11058765bec3bb1e0510254904276d29d4fc31f1"
 dependencies = [
  "anyhow",
  "async-fs 1.6.0",
@@ -4628,9 +4628,9 @@ checksum = "589f6da84c646204747d1270a2a5661ea66ed1cced2631d546fdfb155959f9ec"
 
 [[package]]
 name = "winnow"
-version = "0.6.19"
+version = "0.6.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c52ac009d615e79296318c1bcce2d422aaca15ad08515e344feeda07df67a587"
+checksum = "36c1fec1a2bb5866f07c25f68c26e565c4c200aebb96d7e55710c19d3e8ac49b"
 dependencies = [
  "memchr",
 ]
