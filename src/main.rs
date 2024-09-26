@@ -1,4 +1,3 @@
-//use gpui::{prelude::*, App, AppContext, EventEmitter, Model, ModelContext};
 use gpui::*;
 
 struct Counter {
