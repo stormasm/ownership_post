@@ -37,7 +37,8 @@ fn main() {
             cx.emit(Change { increment: 2 });
         });
 
-        assert_eq!(subscriber.read(cx).count, 4);
+        let new_count = subscriber.read(cx).count;
+        //assert_eq!(subscriber.read(cx).count, 4);
 
         cx.activate(true);
         cx.on_action(|_: &Quit, cx| cx.quit());
@@ -55,7 +56,7 @@ fn main() {
             },
             |cx| {
                 cx.new_view(|_cx| Counter {
-                    count: 0,
+                    count: new_count,
                     text: "Sam".into(),
                 })
             },
