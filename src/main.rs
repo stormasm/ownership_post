@@ -79,6 +79,11 @@ impl Render for Counter {
             //.child("Hello, World!");
             .child(format!("Hello, {}!", &self.text));
 
+        let count = div()
+            .bg(rgb(0x4caf50))
+            .text_color(rgb(0xffffff))
+            .child(format!("The number is: {}!", &self.count.to_string()));
+
         div()
             .flex()
             .bg(rgb(0x2e7d32))
@@ -92,16 +97,18 @@ impl Render for Counter {
             //.text_color(rgb(0xffffff))
             //.child(format!("Hello, {}!", &self.text))
             .child(div().flex().flex_col().children(vec![
-                            //increment_button,
-                            //decrement_button,
-                            nushell,
-                            hello_world,
-                            div()
-                                .bg(rgb(0x4caf50))
-                                .text_color(rgb(0xffffff))
-                                .child(
-                                    format!("The number is: {}!", &self.count.to_string())
-                                ),
-                        ]))
+                //increment_button,
+                //decrement_button,
+                nushell,
+                hello_world,
+                count, /*
+                       div()
+                           .bg(rgb(0x4caf50))
+                           .text_color(rgb(0xffffff))
+                           .child(
+                               format!("The number is: {}!", &self.count.to_string())
+                           ),
+                       */
+            ]))
     }
 }
