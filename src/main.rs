@@ -38,7 +38,7 @@ fn main() {
         });
 
         let new_count = subscriber.read(cx).count;
-        //assert_eq!(subscriber.read(cx).count, 4);
+        assert_eq!(subscriber.read(cx).count, 4);
 
         cx.activate(true);
         cx.on_action(|_: &Quit, cx| cx.quit());
@@ -77,7 +77,6 @@ impl Render for Counter {
         let hello_world = div()
             .bg(rgb(0x4caf50))
             .text_color(rgb(0xffffff))
-            //.child("Hello, World!");
             .child(format!("Hello, {}!", &self.text));
 
         let count = div()
@@ -95,21 +94,12 @@ impl Render for Counter {
             .border_1()
             .border_color(rgb(0x0000ff))
             .text_xl()
-            //.text_color(rgb(0xffffff))
-            //.child(format!("Hello, {}!", &self.text))
             .child(div().flex().flex_col().children(vec![
                 //increment_button,
                 //decrement_button,
                 nushell,
                 hello_world,
-                count, /*
-                       div()
-                           .bg(rgb(0x4caf50))
-                           .text_color(rgb(0xffffff))
-                           .child(
-                               format!("The number is: {}!", &self.count.to_string())
-                           ),
-                       */
+                count,
             ]))
     }
 }
