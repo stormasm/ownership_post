@@ -73,6 +73,11 @@ impl Render for Counter {
             .text_color(rgb(0xffffff))
             .child("Nushell rocks!");
 
+        let hello_world = div()
+            .bg(rgb(0x4caf50))
+            .text_color(rgb(0xffffff))
+            .child("Hello, World!");
+
         div()
             .flex()
             .bg(rgb(0x2e7d32))
@@ -89,6 +94,7 @@ impl Render for Counter {
                             //increment_button,
                             //decrement_button,
                             nushell,
+                            hello_world,
                             div()
                                 .bg(rgb(0x4caf50))
                                 .text_color(rgb(0xffffff))
