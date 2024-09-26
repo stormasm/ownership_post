@@ -27,7 +27,7 @@ fn main() {
 
             Counter {
                 count: counter.read(cx).count * 2,
-                text: "Hello World".into(),
+                text: "Hello Puppy".into(),
             }
         });
 
@@ -56,7 +56,7 @@ fn main() {
             |cx| {
                 cx.new_view(|_cx| Counter {
                     count: 0,
-                    text: "World".into(),
+                    text: "Sam".into(),
                 })
             },
         )
@@ -76,7 +76,8 @@ impl Render for Counter {
         let hello_world = div()
             .bg(rgb(0x4caf50))
             .text_color(rgb(0xffffff))
-            .child("Hello, World!");
+            //.child("Hello, World!");
+            .child(format!("Hello, {}!", &self.text));
 
         div()
             .flex()
@@ -88,8 +89,8 @@ impl Render for Counter {
             .border_1()
             .border_color(rgb(0x0000ff))
             .text_xl()
-            .text_color(rgb(0xffffff))
-            .child(format!("Hello, {}!", &self.text))
+            //.text_color(rgb(0xffffff))
+            //.child(format!("Hello, {}!", &self.text))
             .child(div().flex().flex_col().children(vec![
                             //increment_button,
                             //decrement_button,
