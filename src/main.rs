@@ -12,6 +12,8 @@ struct Change {
 
 impl EventEmitter<Change> for Counter {}
 
+actions!(calculator, [Quit]);
+
 fn main() {
     App::new().run(|cx: &mut AppContext| {
         let counter: Model<Counter> = cx.new_model(|_cx| Counter {
@@ -37,6 +39,14 @@ fn main() {
         });
 
         assert_eq!(subscriber.read(cx).count, 4);
+
+        cx.activate(true);
+        cx.on_action(|_: &Quit, cx| cx.quit());
+        cx.bind_keys([KeyBinding::new("cmd-q", Quit, None)]);
+        cx.set_menus(vec![Menu {
+            name: "Calculator".into(),
+            items: vec![MenuItem::action("Quit", Quit)],
+        }]);
 
         let bounds = Bounds::centered(None, size(px(300.0), px(300.0)), cx);
         cx.open_window(
