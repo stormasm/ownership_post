@@ -67,6 +67,12 @@ fn main() {
 impl Render for Counter {
     fn render(&mut self, _cx: &mut ViewContext<Self>) -> impl IntoElement {
         std::dbg!("Rendering counter view");
+
+        let nushell = div()
+            .bg(rgb(0x4caf50))
+            .text_color(rgb(0xffffff))
+            .child("Nushell rocks!");
+
         div()
             .flex()
             .bg(rgb(0x2e7d32))
@@ -82,6 +88,7 @@ impl Render for Counter {
             .child(div().flex().flex_col().children(vec![
                             //increment_button,
                             //decrement_button,
+                            nushell,
                             div()
                                 .bg(rgb(0x4caf50))
                                 .text_color(rgb(0xffffff))
