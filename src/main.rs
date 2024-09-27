@@ -27,7 +27,7 @@ fn main() {
 
             Counter {
                 count: counter.read(cx).count * 2,
-                text: "Hello Puppy".into(),
+                text: "Puppy".into(),
             }
         });
 
@@ -38,6 +38,7 @@ fn main() {
         });
 
         let new_count = subscriber.read(cx).count;
+        let new_text = subscriber.read(cx).text.clone();
         assert_eq!(subscriber.read(cx).count, 4);
 
         cx.activate(true);
@@ -57,7 +58,7 @@ fn main() {
             |cx| {
                 cx.new_view(|_cx| Counter {
                     count: new_count,
-                    text: "Sam".into(),
+                    text: new_text,
                 })
             },
         )
@@ -72,17 +73,17 @@ impl Render for Counter {
         let nushell = div()
             .bg(rgb(0x4caf50))
             .text_color(rgb(0xffffff))
-            .child("Nushell rocks!");
+            .child("Rock and Roll");
 
         let hello_world = div()
             .bg(rgb(0x4caf50))
             .text_color(rgb(0xffffff))
-            .child(format!("Hello, {}!", &self.text));
+            .child(format!("Hello {}", &self.text));
 
         let count = div()
             .bg(rgb(0x4caf50))
             .text_color(rgb(0xffffff))
-            .child(format!("The number is: {}!", &self.count.to_string()));
+            .child(format!("The number is {}", &self.count.to_string()));
 
         div()
             .flex()
