@@ -70,6 +70,25 @@ impl Render for Counter {
     fn render(&mut self, _cx: &mut ViewContext<Self>) -> impl IntoElement {
         std::dbg!("Rendering counter view");
 
+        let increment_button = div()
+            .bg(rgb(0x4caf50))
+            .text_color(rgb(0xffffff))
+            .child("Increment")
+            .on_mouse_down(MouseButton::Left, move |_event, _cx| {
+                std::dbg!("Incrementing counter");
+                /*
+                CounterModel::update(
+                    |model, cx| {
+                        model.inner.update(cx, |model, cx| {
+                            model.count += 1;
+                            cx.notify();
+                        });
+                    },
+                    cx,
+                )
+                */
+            });
+
         let nushell = div()
             .bg(rgb(0x4caf50))
             .text_color(rgb(0xffffff))
@@ -96,7 +115,7 @@ impl Render for Counter {
             .border_color(rgb(0x0000ff))
             .text_xl()
             .child(div().flex().flex_col().children(vec![
-                //increment_button,
+                increment_button,
                 //decrement_button,
                 nushell,
                 hello_world,
